@@ -1,0 +1,23 @@
+{
+  "name": "testatrascappnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SOKu-ma/testAtrascAppNodeJs.git"
+  },
+  "author": "Shuhei Ota",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SOKu-ma/testAtrascAppNodeJs/issues"
+  },
+  "homepage": "https://github.com/SOKu-ma/testAtrascAppNodeJs#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1"
+  }
+}
