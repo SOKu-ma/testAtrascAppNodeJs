@@ -6,6 +6,8 @@ var csv = require("csvtojson");
 
 const csvFilePath = './data/csvData.csv';
 
+const port = process.env.port || 3000
+
 app.get("/api", async function(req, res, next) {
     try {
         const jsonArray = await csv().fromFile(csvFilePath);
@@ -21,6 +23,6 @@ app.use((err, req, res) => {
     res.status(500).send('Internal Server Error');
   });
 
-var server = app.listen(3000, function() {
+var server = app.listen(port, function() {
     console.log("Node.js is listeninig to PORT:" + server.address().port);
 })
