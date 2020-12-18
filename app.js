@@ -23,6 +23,6 @@ app.use((err, req, res) => {
     res.status(500).send('Internal Server Error');
   });
 
-var server = app.listen(port, function() {
+var server = app.listen(port, () => {
     console.log("Node.js is listeninig to PORT:" + server.address().port);
 })
