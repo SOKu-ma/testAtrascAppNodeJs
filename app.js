@@ -19,9 +19,10 @@ app.get('/api', async function (req, res, next) {
         }
     })
 
-app.use(function(err, req, res) {
+app.use(function(err, req, res, next) {
         console.error(err);
         res.status(500).send('Internal Server Error');
+        next();
     });
 
 var server = app.listen(port, () => {
