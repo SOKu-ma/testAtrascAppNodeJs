@@ -6,7 +6,7 @@ var csv = require('csvtojson');
 
 const csvFilePath = './data/csvData.csv';
 
-const port = process.env.port || 1337;
+const port = process.env.port || 8080;
 
 app.get('/api', async (req, res, next) => {
         try {
@@ -18,10 +18,10 @@ app.get('/api', async (req, res, next) => {
         }
     })
 
-app.use((err, req, res, next) => {
-    console.error(err);
-    res.status(500).send('Internal Server Error');
-  });
+app.use((err, req, res) => {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    });
 
 var server = app.listen(port, () => {
     console.log('Node.js is listeninig to PORT:' + server.address().port);
