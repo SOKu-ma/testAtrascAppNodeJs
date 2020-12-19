@@ -8,15 +8,15 @@ const csvFilePath = './data/csvData.csv';
 
 const port = process.env.port || 1337;
 
-app.get("/api", async function(req, res, next) {
-    try {
-        const jsonArray = await csv().fromFile(csvFilePath);
-        res.json(jsonArray);
-    }
-    catch {
-        next(error);
-    }
-})
+app.get("/api", async (req, res, next) => {
+        try {
+            const jsonArray = await csv().fromFile(csvFilePath);
+            res.json(jsonArray);
+        }
+        catch {
+            next(error);
+        }
+    })
 
 app.use((err, req, res, next) => {
     console.error(err);
