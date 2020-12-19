@@ -6,7 +6,7 @@ var csv = require("csvtojson");
 
 const csvFilePath = './data/csvData.csv';
 
-const port = process.env.port || 8080;
+const port = process.env.port || 1337;
 
 app.get("/api", async function(req, res, next) {
     try {
