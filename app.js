@@ -18,7 +18,7 @@ app.get('/api', async (req, res, next) => {
         }
     })
 
-app.use((req, res, err) => {
+app.use((err, req, res) => {
         console.error(err);
         res.status(500).send('Internal Server Error');
     });
