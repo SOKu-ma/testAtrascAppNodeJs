@@ -16,10 +16,11 @@ app.get('/', async function (req, res, next) {
         }
     })
 
-app.use(function(err, req, res) {
-        console.error(err);
-        res.status(500).send('Internal Server Error');
-    });
+// app.use(function(err, req, res) {
+//         console.error(err);
+//         console.log(res.status);
+//         res.status(500).send('Internal Server Error');
+//     });
 
 var server = app.listen(port, () => {
     console.log('Node.js is listeninig to PORT:' + server.address().port);
