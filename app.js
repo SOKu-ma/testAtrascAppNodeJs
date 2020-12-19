@@ -1,14 +1,14 @@
-var express = require("express");
+var express = require('express');
 var app = express();
 
 // var fs = require("fs");
-var csv = require("csvtojson");
+var csv = require('csvtojson');
 
 const csvFilePath = './data/csvData.csv';
 
 const port = process.env.port || 1337;
 
-app.get("/api", async (req, res, next) => {
+app.get('/api', async (req, res, next) => {
         try {
             const jsonArray = await csv().fromFile(csvFilePath);
             res.json(jsonArray);
@@ -24,5 +24,5 @@ app.use((err, req, res, next) => {
   });
 
 var server = app.listen(port, () => {
-    console.log("Node.js is listeninig to PORT:" + server.address().port);
+    console.log('Node.js is listeninig to PORT:' + server.address().port);
 })
